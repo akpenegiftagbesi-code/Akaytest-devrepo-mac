@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Language Hub 100% for kids! | French & Spanish for Anglophones</title>
-  <!-- Google Fonts + simple reset -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome 6 (free icons) -->
+  <title>Language Hub 100% for kids! | French & Spanish with Audio & Full Curriculum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -14,25 +13,20 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(145deg, #fef9e6 0%, #fff5e8 100%);
-      color: #1e2f3e;
+      background: linear-gradient(135deg, #FFF8E7 0%, #FFEFD6 100%);
+      color: #2C3E50;
       line-height: 1.5;
     }
-
-    /* Kodecloud style: fun, bubbly, colorful country accents */
     .container {
-      max-width: 1300px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 1.2rem 2rem;
+      padding: 1rem 2rem;
     }
-
-    /* header */
     .hero {
       text-align: center;
-      padding: 1rem 0 2rem 0;
+      padding: 1rem 0 1.5rem;
     }
     .hero h1 {
       font-size: 3rem;
@@ -41,93 +35,58 @@
       -webkit-background-clip: text;
       color: transparent;
       display: inline-block;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.5px;
     }
     .hero h1 i {
-      background: none;
       color: #E9C46A;
-      margin-right: 10px;
     }
     .hero p {
       font-size: 1.3rem;
-      font-weight: 600;
-      background: #f7f3e0;
+      background: #FFF5E0;
       display: inline-block;
-      padding: 0.3rem 1.5rem;
+      padding: 0.3rem 1.8rem;
       border-radius: 60px;
-      box-shadow: 0 5px 0 #ddd2b0;
+      box-shadow: 0 4px 0 #E9C46A;
     }
-
-    /* country flag colors modules */
     .modules-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      margin: 3rem 0;
+      margin: 2rem 0;
       justify-content: center;
     }
     .module-card {
       flex: 1;
-      min-width: 280px;
+      min-width: 300px;
       border-radius: 48px 32px 48px 32px;
       background: white;
       padding: 1.6rem;
-      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
       cursor: pointer;
       border-top: 12px solid;
     }
-    .module-card:hover {
-      transform: translateY(-10px);
-    }
-    .french-card {
-      border-top-color: #2A9D8F;  /* France / nature friendly */
-      background: #F4F1DE;
-    }
-    .spanish-card {
-      border-top-color: #E76F51;  /* Spain warmth */
-      background: #FFE8D6;
-    }
-    .module-title {
-      font-size: 2rem;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 1rem;
-    }
+    .module-card:hover { transform: translateY(-8px); }
+    .french-card { border-top-color: #2A9D8F; background: #F4F1DE; }
+    .spanish-card { border-top-color: #E76F51; background: #FFE8D6; }
+    .module-title { font-size: 2rem; font-weight: 800; display: flex; gap: 12px; margin-bottom: 1rem; }
     .french-card .module-title { color: #2A9D8F; }
     .spanish-card .module-title { color: #E76F51; }
-    .module-img {
-      background: #ffffffc9;
-      border-radius: 50px;
-      padding: 0.6rem;
-      text-align: center;
-      font-size: 3rem;
-      margin: 1rem 0;
-    }
+    .module-img { background: #fff9ef; border-radius: 50px; padding: 0.6rem; text-align: center; font-size: 2.5rem; margin: 1rem 0; }
     .start-btn {
-      background: #1e2f3e;
+      background: #2C3E50;
       color: white;
       border: none;
       padding: 12px 20px;
       border-radius: 60px;
       font-weight: bold;
       font-size: 1rem;
-      margin-top: 1rem;
       width: 100%;
       cursor: pointer;
       transition: 0.2s;
     }
-    .start-btn:hover {
-      background: #F4A261;
-      color: #1e2f3e;
-    }
-
-    /* lesson panel (dynamic) */
+    .start-btn:hover { background: #F4A261; color: #2C3E50; }
     .lesson-panel {
-      background: #fffef7;
+      background: #FFFEF7;
       border-radius: 48px;
       padding: 2rem;
       margin-top: 2rem;
@@ -142,65 +101,73 @@
       align-items: center;
       border-bottom: 3px dashed #F5CBA8;
       padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     .back-icon {
-      background: #eee3c9;
+      background: #EEE3C9;
       padding: 8px 20px;
       border-radius: 50px;
       cursor: pointer;
       font-weight: bold;
     }
-    .motivation-note {
-      background: #FEF9E3;
-      border-left: 8px solid #F4A261;
-      padding: 1rem;
-      border-radius: 28px;
+    .module-tabs {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
       margin: 1rem 0;
-      font-style: italic;
-      font-weight: 600;
     }
-    .topic-block {
-      background: #faf7f0;
-      padding: 1rem;
-      border-radius: 28px;
+    .mod-btn {
+      background: #E9ECEF;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .mod-btn.active {
+      background: #F4A261;
+      color: white;
+    }
+    .topic-card {
+      background: #FAF7F0;
+      border-radius: 32px;
+      padding: 1.2rem;
       margin: 1.2rem 0;
+      transition: 0.1s;
+    }
+    .audio-btn {
+      background: #2A9D8F;
+      color: white;
+      border: none;
+      border-radius: 60px;
+      padding: 6px 14px;
+      margin: 5px 5px 0 0;
+      cursor: pointer;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
     .summary-box, .quiz-box {
-      background: #e9f5f1;
+      background: #E9F5F1;
       border-radius: 32px;
       padding: 1.2rem;
       margin: 1.5rem 0;
     }
-    .quiz-question {
-      background: white;
-      border-radius: 28px;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
     .quiz-option {
-      background: #f0e5d2;
-      margin: 0.5rem 0;
+      background: #F0E5D2;
+      margin: 0.6rem 0;
       padding: 0.6rem 1rem;
       border-radius: 60px;
       cursor: pointer;
       transition: 0.1s;
     }
-    .quiz-option:hover {
-      background: #F4A261;
-      color: white;
-    }
-    .correct-feedback {
-      color: green;
-      font-weight: bold;
-    }
-    .wrong-feedback {
-      color: #c44536;
-    }
-    .payment-links, .side-policies {
-      background: #f8ede0;
+    .quiz-option:hover { background: #F4A261; color: white; }
+    .payment-links {
+      background: #F8EDE0;
       border-radius: 36px;
-      margin-top: 2.5rem;
+      margin-top: 2rem;
       padding: 1.5rem;
       display: flex;
       flex-wrap: wrap;
@@ -216,25 +183,12 @@
       font-weight: bold;
       display: inline-block;
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #6c5b4b;
-    }
-    button {
-      font-family: 'Quicksand', sans-serif;
-    }
-    i.fa, i.far, i.fas {
-      margin-right: 6px;
-    }
+    footer { text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #6c5b4b; }
+    .correct-feedback { color: #2A9D8F; font-weight: bold; }
+    .wrong-feedback { color: #E76F51; }
     @media (max-width: 700px) {
-      .container {
-        padding: 1rem;
-      }
-      .hero h1 {
-        font-size: 2rem;
-      }
+      .container { padding: 1rem; }
+      .hero h1 { font-size: 2rem; }
     }
   </style>
 </head>
@@ -242,294 +196,278 @@
 <div class="container">
   <div class="hero">
     <h1><i class="fas fa-language"></i> Language Hub 100% for kids!</h1>
-    <p>✨ Learn French & Spanish the FUN way! ✨</p>
-    <div style="margin-top: 12px; font-size:1.1rem">🇫🇷 🥖 + 🇪🇸 💃 = 🌎 Superpower!</div>
+    <p>🎧 Learn French & Spanish with AUDIO! 🎤 + Full Beginner Curriculum</p>
+    <div style="margin-top: 10px;">🇫🇷 🥖 • 🇪🇸 💃 • "Unlock a superpower!"</div>
   </div>
 
-  <!-- Two main modules (French / Spanish) showing as country cards -->
   <div class="modules-grid">
     <div class="module-card french-card" id="frenchModuleBtn">
       <div class="module-title"><i class="fas fa-baguette-bread"></i> French 🇫🇷</div>
-      <div class="module-img">🐸 ✨ le bonjour!</div>
-      <p><strong>Salut!</strong> Learn greetings, colors, and animals in French. With fun pictures and simple stories!</p>
-      <button class="start-btn" data-lang="french"><i class="fas fa-star-of-life"></i> Start French Course</button>
+      <div class="module-img">🐸 🎵 le français magique!</div>
+      <p><strong>Le programme:</strong> 3 modules: Personal Identity, Immediate World, Daily Needs. Audio for every word!</p>
+      <button class="start-btn" data-lang="french"><i class="fas fa-headphones"></i> Start French Course</button>
     </div>
     <div class="module-card spanish-card" id="spanishModuleBtn">
       <div class="module-title"><i class="fas fa-sun"></i> Spanish 🇪🇸</div>
-      <div class="module-img">💃 🦜 ¡Hola amigos!</div>
-      <p><strong>¡Hola!</strong> Learn basic greetings, numbers, and how to talk about family. Let's fiesta!</p>
-      <button class="start-btn" data-lang="spanish"><i class="fas fa-guitar"></i> Start Spanish Course</button>
+      <div class="module-img">💃 🦜 ¡Español total!</div>
+      <p><strong>El plan:</strong> 3 modules: Personal Identity, Immediate World, Daily Needs. Audio + pronunciación!</p>
+      <button class="start-btn" data-lang="spanish"><i class="fas fa-headphones"></i> Start Spanish Course</button>
     </div>
   </div>
 
-  <!-- DYNAMIC LESSON PANEL (full course, summary, quiz, links, moti) -->
   <div id="lessonPanel" class="lesson-panel">
     <div class="lesson-header">
       <div class="back-icon" id="closePanelBtn"><i class="fas fa-arrow-left"></i> Back to hubs</div>
-      <div><i class="fas fa-graduation-cap"></i> <span id="langTitleDisplay"></span> Course</div>
+      <div><i class="fas fa-graduation-cap"></i> <span id="langTitleDisplay"></span> — Beginner Curriculum</div>
     </div>
-
-    <!-- full course content -->
+    <div class="module-tabs" id="moduleTabs"></div>
     <div id="courseContentArea"></div>
-
-    <!-- additional resource links (documents, relevant links) -->
     <div id="resourceLinksArea" style="margin-top: 1rem; background:#F7F2E7; border-radius: 28px; padding:1rem;"></div>
-
-    <!-- side policies + payment link integrated -->
-    <div class="payment-links" id="paymentPolicyArea">
-      <!-- dynamic payment + policies inserted -->
-    </div>
-    <div class="motivation-note" id="dailyMotivationMessage">
-      🌟 "Every new word is like a magic key to a new friend!" 🌟
+    <div class="payment-links" id="paymentPolicyArea"></div>
+    <div class="motivation-note" id="dailyMotivationMessage" style="background:#FEF9E3; border-left:8px solid #F4A261; padding:1rem; border-radius:28px; margin-top:1rem;">
+      🌟 "Every new word is a magic key!" 🌟
     </div>
   </div>
-
-  <footer>
-    <i class="fas fa-heart" style="color:#E63946;"></i> Learning languages = big brain adventure! 
-    Speak another language? You're a global hero! 🦸‍♀️🦸‍♂️
-  </footer>
+  <footer><i class="fas fa-heart" style="color:#E63946;"></i> Bilingual brain = stronger & smarter! Commit 15 min/day ✨</footer>
 </div>
 
 <script>
-  // ---------- FUN DATABASE: FRENCH & SPANISH TOPICS, QUIZ, IMAGES, LINKS ----------
-  const coursesData = {
+  // ---------------------------------------------
+  // FULL CURRICULUM: 3 MODULES per language with concepts + audio pronunciations
+  // each concept includes an audio-friendly phrase (using Web Speech API for demo)
+  // ---------------------------------------------
+  const curriculum = {
     french: {
-      name: "🇫🇷 French for Kids (Le Français) 🥖",
-      topics: [
-        { 
-          title: "👉 Greetings: Bonjour (Hello) & Au revoir (Goodbye)",
-          explanation: "Just like saying 'Hi' in English, 'Bonjour' is a friendly word. 'Au revoir' means see you later. Think of a cute French cat waving 'Bonjour!'",
-          picture: "🐱👋 🥖",
-          example: "Say BONJOUR in the morning, BONSOIR at night!"
-        },
-        { 
-          title: "🌈 Colors: Rouge (red), Bleu (blue), Jaune (yellow)",
-          explanation: "Rouge = like a ladybug 🐞. Bleu = the sky ☁️. Jaune = the big sun ☀️. Mix them and it's art!",
-          picture: "🎨🟥🟦🟨",
-          example: "Le ciel est bleu = The sky is blue."
-        },
-        { 
-          title: "🐶 Animals: Chien (dog), Chat (cat), Oiseau (bird)",
-          explanation: "Chien sounds like 'she + en' — picture a puppy. Chat sounds like 'sha' — kitty says meow!",
-          picture: "🐕 🐈 🐦",
-          example: "J'aime le chat = I love the cat."
-        }
-      ],
-      summary: "✨ French Summary ✨: Bonjour = hello, Au revoir = goodbye. Colors: Rouge(red), Bleu(blue), Jaune(yellow). Animals: Chien(dog), Chat(cat), Oiseau(bird). Keep practicing!",
+      name: "🇫🇷 French for Anglophones",
+      modules: {
+        1: { name: "📘 Module 1: The Personal Identity (Survivalist)", 
+             topics: [
+               { concept: "Greetings: Bonjour / Salut / Au revoir", phrase: "Bonjour, je m'appelle Léa.", pronunciation: "bohn-zhoor, zhuh mah-pel Lay-ah", example: "Say Bonjour in the morning!" },
+               { concept: "Alphabet & Phonics (accents: é, è, ç)", phrase: "l'éléphant, la tête, le garçon", pronunciation: "lay-lay-fahn, lah tet, luh gar-sohn", example: "é sounds like 'ay', è like 'eh'" },
+               { concept: "Numbers 1-100: un, deux, trois... vingt", phrase: "J'ai dix ans. Vingt et un.", pronunciation: "zhay deez ahn. vahn-tay uh", example: "Count from 1 to 20!" },
+               { concept: "Telling time: Quelle heure est-il?", phrase: "Il est trois heures.", pronunciation: "eel ay twah zuhr", example: "Il est midi = it's noon" },
+               { concept: "Present tense: être (to be), avoir (to have)", phrase: "Je suis content. J'ai un chien.", pronunciation: "zhuh swee con-tahn. zhay uh shee-ehn", example: "Je suis = I am, J'ai = I have" }
+             ] },
+        2: { name: "🏠 Module 2: The Immediate World",
+             topics: [
+               { concept: "Family: mère, père, frère, sœur", phrase: "Ma mère et mon père", pronunciation: "mah mehr ay mohn pehr", example: "Frère = brother, Sœur = sister" },
+               { concept: "Pets & Animals: chien, chat, lapin", phrase: "Mon chat est mignon.", pronunciation: "mohn sha ay mee-nyohn", example: "J'adore les animaux!" },
+               { concept: "House: salon, cuisine, chambre", phrase: "Je suis dans la cuisine.", pronunciation: "zhuh swee dahn la kwee-zeen", example: "La chambre = bedroom" },
+               { concept: "School subjects: maths, anglais, art", phrase: "J'aime les maths!", pronunciation: "zhaym lay mat", example: "Le français est super" },
+               { concept: "Grammar: adjective agreement (grand/grande)", phrase: "Un grand frère, une grande sœur", pronunciation: "uh grahn frehr, oon grahnd suhr", example: "Add 'e' for feminine!" }
+             ] },
+        3: { name: "🍕 Module 3: Daily Needs & Leisure",
+             topics: [
+               { concept: "Food & Restaurant: croissant, pain, eau", phrase: "Je voudrais un croissant.", pronunciation: "zhuh voo-dray uh krwah-sahn", example: "À la carte!" },
+               { concept: "Weather: il fait beau, il pleut", phrase: "Il fait chaud aujourd'hui.", pronunciation: "eel fay shoh oh-zhoor-dwee", example: "Quel temps fait-il?" },
+               { concept: "Clothing: pantalon, chemise, chaussures", phrase: "Je porte une chemise bleue.", pronunciation: "zhuh port oon shuh-meez bluh", example: "Les chaussures = shoes" },
+               { concept: "Hobbies: jouer au foot, faire de la musique", phrase: "J'aime jouer au piano.", pronunciation: "zhaym joo-ay oh pee-ah-noh", example: "Les sports sont amusants!" },
+               { concept: "Grammar: aimer + infinitive, regular -er verbs", phrase: "Je parle français.", pronunciation: "zhuh parl frahn-say", example: "Parler, manger, danser!" }
+             ] }
+      },
+      summary: "🎉 French Beginner Summary: You learned greetings, family, food, present tense! Keep practicing with audio. Très bien!",
       quiz: [
-        { question: "How do you say 'Hello' in French?", options: ["Bonjour", "Gracias", "Hola", "Ciao"], correct: 0 },
-        { question: "What does 'Bleu' mean?", options: ["Red", "Green", "Blue", "Yellow"], correct: 2 },
-        { question: "'Chat' is French for which animal?", options: ["Dog", "Bird", "Cat", "Mouse"], correct: 2 }
+        { question: "How to say 'I am' in French?", options: ["Je suis", "J'ai", "Il est", "Tu es"], correct: 0 },
+        { question: "What is 'chat' in English?", options: ["Dog", "Cat", "Bird", "Rabbit"], correct: 1 },
+        { question: "Which phrase means 'I would like a croissant'?", options: ["Je mange un croissant", "Je voudrais un croissant", "J'ai un croissant", "Au revoir"], correct: 1 }
       ],
-      links: [
-        { name: "📖 Free French Flashcards for Kids", url: "https://www.duolingo.com/learn" },
-        { name: "🎵 French Songs for Children (YouTube)", url: "https://www.youtube.com/results?search_query=french+songs+for+kids" },
-        { name: "🐸 Printable French Worksheets", url: "https://www.twinkl.com/resources/french" }
-      ],
-      moti: "French is the language of love and fancy pastries! 🥐 Keep going, chaque petit pas compte (every little step counts)!"
+      links: ["https://www.duolingo.com/course/fr", "https://www.youtube.com/results?search_query=french+for+kids+phonics", "https://www.twinkl.com/resources/french-beginner"]
     },
     spanish: {
-      name: "🇪🇸 ¡Spanish Fiesta! for Kids 💃",
-      topics: [
-        { 
-          title: "👋 Hola & Adiós: Hello and Goodbye",
-          explanation: "Hola (oh-la) means hello — like waving at a llama! Adiós means goodbye. Easy peasy!",
-          picture: "🦙🙋‍♂️🎉",
-          example: "¡Hola, amigo! = Hello, friend!"
-        },
-        { 
-          title: "🔢 Numbers 1-3: Uno, Dos, Tres",
-          explanation: "Uno (like 'you know'), Dos (like dose of fun), Tres (like 'trace'). Count your candies!",
-          picture: "1️⃣2️⃣3️⃣ 🍬",
-          example: "Tres churros, por favor!"
-        },
-        { 
-          title: "👨‍👩‍👧 Family: Mamá, Papá, Hermano (brother)",
-          explanation: "Mamá is mom, Papá is dad, Hermano is brother. Your familia is awesome!",
-          picture: "👩‍👧👨‍👦",
-          example: "Mi mamá es genial = My mom is cool."
-        }
-      ],
-      summary: "🎉 Spanish Summary 🎉: Hola = hello, Adiós = goodbye. Numbers: uno(1), dos(2), tres(3). Family: Mamá(mom), Papá(dad), Hermano(brother). ¡Súper bien!",
+      name: "🇪🇸 Spanish for Anglophones",
+      modules: {
+        1: { name: "📘 Module 1: The Personal Identity",
+             topics: [
+               { concept: "Greetings: Hola, Buenos días, Adiós", phrase: "Hola, ¿cómo estás?", pronunciation: "oh-la, koh-moh es-tahs", example: "Buenas noches = good night" },
+               { concept: "Alphabet & Phonics (ñ, ll, rr)", phrase: "El niño, la calle, el perro", pronunciation: "el nee-nyo, la kah-yeh, el peh-ro", example: "¡Ñ es divertido!" },
+               { concept: "Numbers 1-100: uno, dos, tres... cien", phrase: "Tengo siete años.", pronunciation: "ten-go see-eh-te ah-nyos", example: "¡Cuenta hasta 20!" },
+               { concept: "Telling time: ¿Qué hora es?", phrase: "Son las dos de la tarde.", pronunciation: "sohn lahs dohs deh lah tar-deh", example: "Es la una = it's 1 o'clock" },
+               { concept: "Present tense: ser/estar (to be), tener (to have)", phrase: "Yo soy feliz. Yo tengo un perro.", pronunciation: "yo soee fay-lees. yo ten-go oon peh-ro", example: "Soy = I am (permanent), Estoy = I am (temp)" }
+             ] },
+        2: { name: "🏠 Module 2: The Immediate World",
+             topics: [
+               { concept: "Family: mamá, papá, hermano, hermana", phrase: "Mi mamá es bonita.", pronunciation: "mee ma-mah es bo-nee-tah", example: "Mi familia es genial" },
+               { concept: "Pets: perro, gato, pez", phrase: "Tengo un gato negro.", pronunciation: "ten-go oon gah-toh neh-gro", example: "El perro ladra" },
+               { concept: "House: cocina, sala, dormitorio", phrase: "Estoy en la cocina.", pronunciation: "es-toy en la ko-see-na", example: "Mi cuarto = my room" },
+               { concept: "School subjects: matemáticas, ciencias, arte", phrase: "Me gusta la historia.", pronunciation: "me goo-sta la ee-sto-rya", example: "¡Las ciencias son divertidas!" },
+               { concept: "Grammar: adjective agreement (bonito/bonita)", phrase: "El perro bonito, la casa bonita", pronunciation: "el peh-ro bo-nee-to, la ka-sa bo-nee-ta", example: "Match gender & number!" }
+             ] },
+        3: { name: "🍕 Module 3: Daily Needs & Leisure",
+             topics: [
+               { concept: "Food & Restaurant: taco, agua, helado", phrase: "Quiero un helado de vainilla.", pronunciation: "kye-ro oon eh-lah-do deh vy-nee-ya", example: "La cuenta, por favor" },
+               { concept: "Weather: hace sol, llueve, hace frío", phrase: "Hace buen tiempo.", pronunciation: "ah-seh bwen tyem-po", example: "¿Qué tiempo hace?" },
+               { concept: "Clothing: camisa, pantalones, zapatos", phrase: "Me gustan tus zapatos.", pronunciation: "me goo-stan toos sa-pah-tos", example: "La camisa roja" },
+               { concept: "Hobbies: bailar, escuchar música, jugar fútbol", phrase: "Me gusta bailar salsa.", pronunciation: "me goo-sta bye-lar sahl-sa", example: "Tocar la guitarra" },
+               { concept: "Grammar: gustar + infinitive, regular -ar/-er verbs", phrase: "Yo hablo español.", pronunciation: "yo ah-bloh es-pah-nyol", example: "¡Cantar, correr, vivir!" }
+             ] }
+      },
+      summary: "🎉 Spanish Beginner Summary: You can greet, describe family, order food, and talk about hobbies! ¡Felicidades!",
       quiz: [
-        { question: "How do you say 'Hello' in Spanish?", options: ["Bonjour", "Hola", "Hallo", "Ciao"], correct: 1 },
-        { question: "What number is 'DOS'?", options: ["One", "Two", "Three", "Four"], correct: 1 },
-        { question: "Which word means 'Brother' in Spanish?", options: ["Hermano", "Mamá", "Padre", "Tío"], correct: 0 }
+        { question: "How to say 'Hello, how are you?' in Spanish?", options: ["Hola, ¿cómo estás?", "Buenos días", "Adiós amigo", "Gracias"], correct: 0 },
+        { question: "Which word means 'dog'?", options: ["Gato", "Perro", "Pájaro", "Caballo"], correct: 1 },
+        { question: "What is 'I like to dance' in Spanish?", options: ["Me gusta bailar", "Quiero bailar", "Bailo mucho", "Me gusta cantar"], correct: 0 }
       ],
-      links: [
-        { name: "🎨 Spanish coloring pages (Numbers & Family)", url: "https://www.spanishkids.com/printables" },
-        { name: "🐒 Spanish cartoons (Pocoyo en español)", url: "https://www.youtube.com/c/PocoyoEspa%C3%B1ol" },
-        { name: "📚 'My First Spanish Words' free PDF", url: "https://openlibrary.org/books/spanishforkids" }
-      ],
-      moti: "Spanish is spoken by over 500 million people! You’re becoming a super communicator. ¡Sigue así! (Keep it up!)"
+      links: ["https://www.duolingo.com/course/es", "https://www.spanishdict.com/guide/spanish-alphabet", "https://www.youtube.com/c/SuperSimpleEspanol"]
     }
   };
 
-  // current active language
-  let currentLang = null; // 'french' or 'spanish'
+  let currentLang = null;
+  let currentModule = 1; // 1,2,3
 
-  // Helper: Build all course content, quiz block, summary block, documents and side policies + payment
-  function renderFullCourse(langKey) {
-    const data = coursesData[langKey];
-    if (!data) return;
-    document.getElementById("langTitleDisplay").innerHTML = data.name;
-    const contentArea = document.getElementById("courseContentArea");
-    // Build topics with images and child friendly analogies
-    let topicsHtml = `<div><h2><i class="fas fa-book-open"></i> Your fun lessons:</h2>`;
-    data.topics.forEach(topic => {
-      topicsHtml += `
-        <div class="topic-block">
-          <h3><i class="fas fa-smile-wink"></i> ${topic.title}</h3>
-          <div style="font-size:2rem; background:#fff2e0; display:inline-block; padding:0.2rem 0.8rem; border-radius:40px;">${topic.picture}</div>
-          <p>🧠 <strong>Simple analogy:</strong> ${topic.explanation}</p>
-          <p>✨ Example: <span style="background:#FFE3B5; border-radius:20px; padding:0.2rem 0.8rem;">${topic.example}</span></p>
-          <div class="motivation-note" style="background:#FFF1CF; margin-top:8px;"><i class="fas fa-star"></i> 🌟 Did you know? ${topic.title.split(":")[0]} is like a secret handshake in French/Spanish!</div>
-        </div>
-      `;
-    });
-    topicsHtml += `</div>`;
-    
-    // Summary section
-    const summaryHtml = `
-      <div class="summary-box">
-        <h3><i class="fas fa-clipboard-list"></i> 📝 Summary for this module</h3>
-        <p>${data.summary}</p>
-        <div><i class="fas fa-lightbulb"></i> <strong>Remember:</strong> Review these words before bedtime!</div>
-      </div>
-    `;
-    
-    // Quiz section dynamic
-    let quizHtml = `<div class="quiz-box" id="quizBoxMain"><h3><i class="fas fa-question-circle"></i> ⭐ Quick Quiz! Test yourself ⭐</h3>`;
-    data.quiz.forEach((q, idx) => {
-      quizHtml += `
-        <div class="quiz-question" data-qid="${idx}">
-          <p><strong>${idx+1}. ${q.question}</strong></p>
-          <div class="quiz-options-container">
-            ${q.options.map((opt, optIdx) => `<div class="quiz-option" data-opt-index="${optIdx}" data-qidx="${idx}" data-correct="${optIdx === q.correct ? 'true' : 'false'}">${opt}</div>`).join('')}
-          </div>
-          <div class="quiz-feedback-${idx}" style="margin-top: 8px; font-size:0.9rem;"></div>
-        </div>
-      `;
-    });
-    quizHtml += `<div><button id="resetQuizBtn" style="background:#F4A261; border:none; border-radius:40px; padding:8px 20px; margin-top:10px;"><i class="fas fa-undo-alt"></i> Try quiz again</button></div></div>`;
-    
-    contentArea.innerHTML = topicsHtml + summaryHtml + quizHtml;
-    
-    // attach quiz listeners AFTER rendering
-    attachQuizEvents(langKey);
-    
-    // resources links (all documents)
-    const resourceDiv = document.getElementById("resourceLinksArea");
-    let linksHtml = `<div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;"><i class="fas fa-link"></i> <strong>📚 More resources & full documents:</strong> `;
-    data.links.forEach(link => {
-      linksHtml += `<a href="${link.url}" target="_blank" style="background:#e9cba7; padding:6px 16px; border-radius:40px; text-decoration:none; color:#2d2b26; font-weight:500;">${link.name}</a> `;
-    });
-    linksHtml += `</div><p style="margin-top:14px;"><i class="fas fa-globe"></i> Check these sites for full free courses, videos, and printable books! Ask a parent to explore together.</p>`;
-    resourceDiv.innerHTML = linksHtml;
-    
-    // side policies + payment link: always visible (be safe & encouraging)
-    const paymentPolicyDiv = document.getElementById("paymentPolicyArea");
-    paymentPolicyDiv.innerHTML = `
-      <div style="flex:1">
-        <h4><i class="fas fa-shield-alt"></i> 📜 Side Policies for Safe Learning</h4>
-        <ul style="margin-left:1.2rem;">
-          <li>🔒 Kid-friendly zone: No personal data collected.</li>
-          <li>👨‍👩‍👧 Always learn with a grown-up when clicking external links.</li>
-          <li>🧸 We encourage 15 min daily practice! Consistency = superpower.</li>
-        </ul>
-      </div>
-      <div style="flex:1; text-align:right;">
-        <h4><i class="fas fa-hand-holding-heart"></i> Support Language Hub!</h4>
-        <a href="#" id="fakePaymentLink" class="btn-payment"><i class="fas fa-coffee"></i> ☕ Donate / Subscribe - $5/month</a>
-        <p style="font-size:0.7rem; margin-top:8px;">*Unlock extra printables & fun badges! (Secure link)</p>
-      </div>
-    `;
-    // add alert for payment demonstration (real in production would be Stripe, but as per spec: add payment link)
-    const payBtn = document.getElementById("fakePaymentLink");
-    if(payBtn) {
-      payBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        alert("💖 Great! For now, this is a demo payment link. In real app, you'd connect to a secure payment processor like Stripe/PayPal. Thank you for supporting language learning for kids!");
-      });
-    }
-    
-    // add persistent motivational note for each course (dynamic)
-    const motiSpan = document.getElementById("dailyMotivationMessage");
-    motiSpan.innerHTML = `✨ ${data.moti} ✨ <i class="fas fa-rocket"></i> Keep shining!`;
+  function speakText(text, langCode) {
+    // Web Speech API for child-friendly audio pronunciation
+    if (!window.speechSynthesis) { alert("Sorry, audio not supported on this browser."); return; }
+    let utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = langCode; // 'fr-FR' or 'es-ES'
+    utterance.rate = 0.9;
+    utterance.pitch = 1.1;
+    window.speechSynthesis.cancel(); // avoid overlapping
+    window.speechSynthesis.speak(utterance);
   }
-  
-  function attachQuizEvents(langKey) {
-    const data = coursesData[langKey];
+
+  function renderModule(lang, moduleId) {
+    const data = curriculum[lang];
+    const moduleData = data.modules[moduleId];
+    if (!moduleData) return;
+    let html = `<h3><i class="fas fa-star-of-life"></i> ${moduleData.name}</h3><p>✨ Click the 🔊 buttons to hear pronunciation! ✨</p>`;
+    moduleData.topics.forEach(t => {
+      html += `
+        <div class="topic-card">
+          <h4><i class="fas fa-comment-dots"></i> ${t.concept}</h4>
+          <p><strong>📖 Phrase:</strong> "${t.phrase}" 
+            <button class="audio-btn" data-phrase="${t.phrase}" data-langcode="${lang === 'french' ? 'fr-FR' : 'es-ES'}"><i class="fas fa-volume-up"></i> Pronounce</button>
+          </p>
+          <p><strong>🔊 Say it like:</strong> ${t.pronunciation}</p>
+          <p><i class="fas fa-lightbulb"></i> ${t.example}</p>
+          <div class="motivation-note" style="background:#FFF2DF; margin-top:6px;"><i class="fas fa-smile"></i> 🌟 Tip: Repeat out loud 3 times!</div>
+        </div>
+      `;
+    });
+    // summary and quiz inside module
+    html += `<div class="summary-box"><h3><i class="fas fa-clipboard-list"></i> 📝 Module Summary</h3><p>${data.summary}</p><p><strong>🎯 Commit to reviewing these ${moduleData.topics.length} topics!</strong></p></div>`;
+    html += `<div class="quiz-box" id="moduleQuiz"><h3><i class="fas fa-question-circle"></i> ⭐ Module Quiz ⭐</h3>`;
+    data.quiz.forEach((q, idx) => {
+      html += `<div class="quiz-question" data-qid="${idx}"><p><strong>${idx+1}. ${q.question}</strong></p><div class="quiz-options">`;
+      q.options.forEach((opt, optIdx) => {
+        html += `<div class="quiz-option" data-opt-index="${optIdx}" data-qidx="${idx}" data-correct="${optIdx === q.correct ? 'true' : 'false'}">${opt}</div>`;
+      });
+      html += `<div class="quiz-feedback-${idx}" style="margin-top: 8px;"></div></div></div>`;
+    });
+    html += `<button id="resetQuizModuleBtn" style="background:#F4A261; border:none; border-radius:40px; padding:8px 20px; margin-top:10px;"><i class="fas fa-undo-alt"></i> Reset Quiz</button></div>`;
+    document.getElementById("courseContentArea").innerHTML = html;
+
+    // attach audio buttons
+    document.querySelectorAll('.audio-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const phrase = btn.getAttribute('data-phrase');
+        const code = btn.getAttribute('data-langcode');
+        speakText(phrase, code);
+      });
+    });
+    attachQuizEventsForModule();
+  }
+
+  function attachQuizEventsForModule() {
+    const data = curriculum[currentLang];
     if (!data) return;
-    // for each quiz question handle option click
     for(let qIdx = 0; qIdx < data.quiz.length; qIdx++) {
       const questionDiv = document.querySelector(`.quiz-question[data-qid="${qIdx}"]`);
-      if(!questionDiv) continue;
-      const options = questionDiv.querySelectorAll('.quiz-option');
-      options.forEach(opt => {
-        // remove previous listeners by cloning technique? simple rebind with new ones
-        opt.removeEventListener('click', quizClickHandler);
-        opt.addEventListener('click', quizClickHandler);
-      });
+      if(questionDiv) {
+        const options = questionDiv.querySelectorAll('.quiz-option');
+        options.forEach(opt => {
+          opt.removeEventListener('click', quizHandler);
+          opt.addEventListener('click', quizHandler);
+        });
+      }
     }
-    // reset quiz button
-    const resetBtn = document.getElementById("resetQuizBtn");
+    const resetBtn = document.getElementById("resetQuizModuleBtn");
     if(resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        // clear all feedbacks and reset option styles
+      resetBtn.onclick = () => {
         for(let i=0; i<data.quiz.length; i++) {
           const fbDiv = document.querySelector(`.quiz-feedback-${i}`);
           if(fbDiv) fbDiv.innerHTML = "";
-          const allOptions = document.querySelectorAll(`.quiz-question[data-qid="${i}"] .quiz-option`);
-          allOptions.forEach(opt => {
-            opt.style.background = "#f0e5d2";
-            opt.style.color = "#1e2f3e";
-          });
+          const opts = document.querySelectorAll(`.quiz-question[data-qid="${i}"] .quiz-option`);
+          opts.forEach(opt => { opt.style.background = "#F0E5D2"; opt.style.color = "#2C3E50"; opt.style.pointerEvents = "auto"; });
+          const qDiv = document.querySelector(`.quiz-question[data-qid="${i}"]`);
+          if(qDiv) qDiv.removeAttribute('data-answered');
         }
-      });
+      };
     }
   }
-  
-  function quizClickHandler(event) {
-    const targetOpt = event.currentTarget;
-    const qidx = targetOpt.getAttribute('data-qidx');
-    const isCorrect = targetOpt.getAttribute('data-correct') === 'true';
+
+  function quizHandler(event) {
+    const opt = event.currentTarget;
+    const qidx = opt.getAttribute('data-qidx');
+    const isCorrect = opt.getAttribute('data-correct') === 'true';
     const feedbackDiv = document.querySelector(`.quiz-feedback-${qidx}`);
-    if(!feedbackDiv) return;
-    // disable all options in same question after answering (so no cheating, but child can reset)
-    const parentQuestion = targetOpt.closest('.quiz-question');
-    if(parentQuestion.getAttribute('data-answered') === 'true') {
-      feedbackDiv.innerHTML = "<span class='wrong-feedback'>🌟 Already answered! Click 'Try quiz again' to redo 🌟</span>";
+    const parentDiv = opt.closest('.quiz-question');
+    if(parentDiv.getAttribute('data-answered') === 'true') {
+      feedbackDiv.innerHTML = "<span class='wrong-feedback'>🌟 Already answered! Hit reset to try again 🌟</span>";
       return;
     }
-    parentQuestion.setAttribute('data-answered', 'true');
+    parentDiv.setAttribute('data-answered', 'true');
     if(isCorrect) {
-      feedbackDiv.innerHTML = "<span class='correct-feedback'><i class='fas fa-check-circle'></i> ✔️ Fantastic! That's correct! You're a language star! 🌟</span>";
-      // give extra visual highlight to correct answer
-      targetOpt.style.background = "#9CD9B5";
+      feedbackDiv.innerHTML = "<span class='correct-feedback'><i class='fas fa-check-circle'></i> ✔️ Fantastic! You're a language star! 🌟</span>";
+      opt.style.background = "#9CD9B5";
     } else {
-      const correctIndex = Array.from(targetOpt.parentNode.querySelectorAll('.quiz-option')).find(opt => opt.getAttribute('data-correct') === 'true');
-      const correctAnswerText = correctIndex ? correctIndex.innerText : "unknown";
-      feedbackDiv.innerHTML = `<span class='wrong-feedback'><i class="fas fa-redo-alt"></i> Oops! Not quite. The correct answer is: ${correctAnswerText}. Keep going! ✨</span>`;
-      targetOpt.style.background = "#F4ACB7";
+      const allOpts = parentDiv.querySelectorAll('.quiz-option');
+      let correctAnswer = "";
+      allOpts.forEach(o => { if(o.getAttribute('data-correct') === 'true') correctAnswer = o.innerText; });
+      feedbackDiv.innerHTML = `<span class='wrong-feedback'><i class="fas fa-redo-alt"></i> Oops! Correct answer: ${correctAnswer}. Keep practicing! 🚀</span>`;
+      opt.style.background = "#F4ACB7";
     }
-    // disable all options in that question to prevent multiple answers
-    const allOptions = parentQuestion.querySelectorAll('.quiz-option');
-    allOptions.forEach(opt => {
-      opt.style.pointerEvents = "none";
+    const allOptions = parentDiv.querySelectorAll('.quiz-option');
+    allOptions.forEach(o => { o.style.pointerEvents = "none"; });
+  }
+
+  function renderModuleTabs() {
+    const data = curriculum[currentLang];
+    const tabsDiv = document.getElementById("moduleTabs");
+    let tabsHtml = `<span style="margin-right:12px;"><i class="fas fa-map"></i> Choose module:</span>`;
+    for(let i=1; i<=3; i++) {
+      tabsHtml += `<button class="mod-btn ${currentModule === i ? 'active' : ''}" data-mod="${i}">${data.modules[i].name.split(':')[0]}</button>`;
+    }
+    tabsDiv.innerHTML = tabsHtml;
+    document.querySelectorAll('.mod-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        currentModule = parseInt(btn.getAttribute('data-mod'));
+        renderModuleTabs();
+        renderModule(currentLang, currentModule);
+      });
     });
   }
-  
-  // show panel and load language
+
   function loadLanguage(lang) {
     currentLang = lang;
-    renderFullCourse(lang);
+    currentModule = 1;
+    const data = curriculum[lang];
+    document.getElementById("langTitleDisplay").innerHTML = data.name;
+    renderModuleTabs();
+    renderModule(lang, currentModule);
+    // Resources and payment/policies
+    const resourceDiv = document.getElementById("resourceLinksArea");
+    let linksHtml = `<div><i class="fas fa-link"></i> <strong>📚 Full course documents & extra practice:</strong><br>`;
+    data.links.forEach((link, idx) => {
+      linksHtml += `<a href="${link}" target="_blank" style="background:#e9cba7; padding:5px 14px; border-radius:40px; text-decoration:none; display:inline-block; margin:5px; color:#2C3E50;">Resource ${idx+1} <i class="fas fa-external-link-alt"></i></a> `;
+    });
+    linksHtml += `</div><p><i class="fas fa-globe"></i> Ask a parent to explore full free courses & printable worksheets!</p>`;
+    resourceDiv.innerHTML = linksHtml;
+
+    const paymentDiv = document.getElementById("paymentPolicyArea");
+    paymentDiv.innerHTML = `
+      <div style="flex:1"><h4><i class="fas fa-shield-alt"></i> 📜 Kid-Safe Policies</h4><ul><li>🔒 No personal data collected</li><li>👨‍👩‍👧 Always learn with a grown-up online</li><li>🎯 Commit 15 min/day = language superpower!</li></ul></div>
+      <div style="flex:1; text-align:right;"><h4><i class="fas fa-hand-holding-heart"></i> Support Language Hub!</h4><a href="#" id="paymentDemoLink" class="btn-payment"><i class="fas fa-coffee"></i> Donate / Subscribe $5/month</a><p style="font-size:0.7rem;">Get extra printables & badges (demo link)</p></div>
+    `;
+    const payDemo = document.getElementById("paymentDemoLink");
+    if(payDemo) payDemo.addEventListener("click", (e) => { e.preventDefault(); alert("💖 Thank you for supporting language learning for kids! In real app this would be a secure Stripe/PayPal link."); });
+
+    const motiMsg = document.getElementById("dailyMotivationMessage");
+    motiMsg.innerHTML = `✨ "${lang === 'french' ? 'Petit à petit, l’oiseau fait son nid. (Little by little, the bird builds its nest)' : 'Poco a poco se va lejos. (Little by little one goes far)'} — Keep going, multilinguist!" ✨ <i class="fas fa-rocket"></i>`;
     document.getElementById("lessonPanel").style.display = "block";
-    // scroll to panel nice effect
-    document.getElementById("lessonPanel").scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("lessonPanel").scrollIntoView({ behavior: "smooth" });
   }
-  
-  // event listeners for module cards
+
   document.querySelectorAll('.start-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -538,26 +476,9 @@
       else if(lang === 'spanish') loadLanguage('spanish');
     });
   });
-  
-  // also direct on card click? but buttons are fine. Click on module-card can also open for easier UX
-  document.getElementById("frenchModuleBtn").addEventListener('click', (e) => {
-    if(e.target.tagName !== 'BUTTON') loadLanguage('french');
-  });
-  document.getElementById("spanishModuleBtn").addEventListener('click', (e) => {
-    if(e.target.tagName !== 'BUTTON') loadLanguage('spanish');
-  });
-  
-  document.getElementById("closePanelBtn").addEventListener('click', () => {
-    document.getElementById("lessonPanel").style.display = "none";
-    currentLang = null;
-  });
-  
-  // add initial motivational visible on page load
-  const initialMoti = document.getElementById("dailyMotivationMessage");
-  initialMoti.innerHTML = "🌟 'Languages open doors to new friends, delicious food, and amazing adventures!' 🌟 Keep learning every day!";
-  
-  // demo instruction: For each concept we embedded motivational notes inside each topic block, summary & quiz.
-  console.log("Language Hub 100% for kids! Ready to inspire young linguists!");
+  document.getElementById("frenchModuleBtn")?.addEventListener('click', (e) => { if(e.target.tagName !== 'BUTTON') loadLanguage('french'); });
+  document.getElementById("spanishModuleBtn")?.addEventListener('click', (e) => { if(e.target.tagName !== 'BUTTON') loadLanguage('spanish'); });
+  document.getElementById("closePanelBtn").addEventListener('click', () => { document.getElementById("lessonPanel").style.display = "none"; currentLang = null; });
 </script>
 </body>
 </html>
